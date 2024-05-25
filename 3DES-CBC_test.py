@@ -4,7 +4,7 @@
 # * By: stereohj (stereohj.dev@gmail.com)
 
 # ! ***EDUCATIONAL ONLY***
-# ! TDEA / Triple-DES / 3DES ALGORITHM AND THIS KIND OF USE IS ***DANGEROUS***
+# ! TDEA / Triple-DES / 3DES Algorithm is obsolete and ***SHOULD NOT BE USED***
 
 from os import urandom                                                      # Cryptographic secure PRNG (From Operating System)
 from cryptography.hazmat.primitives.ciphers.algorithms import TripleDES     # Algorithm class
@@ -20,7 +20,8 @@ key = urandom(16)
 print("\n*** 3DES WITH CBC MODE ***\n")
 
 # * CBC Mode requires an IV (Initialization vector)
-iv = urandom(8)   # IV must be have the block data size used by the algorithm
+# ! IV must keep secret
+iv = urandom(8)   # IV must have the block data size used by the algorithm
                   # For 3DES the data block size is 64 bits (8 bytes / 16 hex)
                   
 
@@ -29,7 +30,7 @@ algorithm = TripleDES(key)
 cipher = Cipher(algorithm, modes.CBC(iv))
 
 
-# * Input data
+# * Input data (Python's byte representation)
 data = b"messagesmessages"
 
 
@@ -80,5 +81,5 @@ if is_padded:
       pdata = unpadder.update(pdata) + unpadder.finalize()
 
 
-print(f"DECRYPTED data: {pdata.decode()}", 
+print(f"DECRYPTED data: {pdata}", 
       f"[Data length (bytes): {len(pdata)}]", sep='\n', end='\n\n')

@@ -4,7 +4,8 @@
 # * By: stereohj (stereohj.dev@gmail.com)
 
 # ! ***EDUCATIONAL ONLY***
-# ! TDEA / Triple-DES / 3DES ALGORITHM AND THIS KIND OF USE IS ***DANGEROUS***
+# ! TDEA / Triple-DES / 3DES Algorithm is obsolete and ***SHOULD NOT BE USED***
+# ! ECB (Electronic Codebook) mode of operation is vulnerable and ***SHOULD NOT BE USED***
 
 from os import urandom                                                      # Cryptographic secure PRNG (From Operating System)
 from cryptography.hazmat.primitives.ciphers.algorithms import TripleDES     # Algorithm class
@@ -24,7 +25,7 @@ algorithm = TripleDES(key)
 cipher = Cipher(algorithm, modes.ECB())
 
 
-# * Input data
+# * Input data (Python's byte representation)
 data = b"messagesmessages"
 
 print(f"Data: {data}", 
@@ -74,5 +75,5 @@ if is_padded:
       pdata = unpadder.update(pdata) + unpadder.finalize()
 
 
-print(f"DECRYPTED data: {pdata.decode()}", 
+print(f"DECRYPTED data: {pdata}", 
       f"[Data length (bytes): {len(pdata)}]", sep='\n', end='\n\n')
