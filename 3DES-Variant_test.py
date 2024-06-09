@@ -18,7 +18,7 @@ def key_check_digits(key: bytes) -> bytes:
       # ! ALERT: Algorithms classes can take keys an apply it some 
       # ! changes (e.g. most cryptographic systems needs 3DES keys
       # ! to be odd parity. So every rightmost bit -RSB- in a key
-      # ! byte can be changed to "converit" in an odd parity byte).
+      # ! byte can be changed to "convert it" in an odd parity byte).
       # ! For this reason USE the bytes *unmutable* object.
       # ! (DO NOT USE a bytearray *mutable* object).
       algorithm = TripleDES(key)      
