@@ -1,5 +1,6 @@
 # Python-3DES-test
 Some 3DES with ECB and CBC modes data processing examples. (VARIANT key exchange method example is added).
+
 **NOTE:** *Scripts* tested in *Python 3.9* and *3.11 versions*.
 
 ## To run the *Python scripts*
@@ -21,7 +22,7 @@ You can use the python package [`venv` (*virtualenv*)][def].
 
 ### 4. Install required python packages
 
-Use `pip` command to install `cryptography` library dependencie file:
+Use `pip` command to install `cryptography` *library dependencie*:
 `pip install cryptography`
 
 ### 4. Run the *scripts* within the *terminal session* where the *virtual environment* is enabled.
