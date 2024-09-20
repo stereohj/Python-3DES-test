@@ -20,10 +20,12 @@ You can use the python package [`venv` (*virtualenv*)][def].
 
 **NOTE:** You can set a custom *venv* folder name at ***Step 2***.
 
-### 4. Install required python packages
+### 4. Install required Python packages
 
-Use `pip` command to install `cryptography` *library dependencie*:
-`pip install cryptography`
+Use `pip` command and the `requirements.txt` file:
+`pip install -r requirements.txt`
+
+**NOTE:** `cryptography` *library dependencie* is used to Cryptography applications.
 
 ### 4. Run the *scripts* within the *terminal session* where the *virtual environment* is enabled.
 
